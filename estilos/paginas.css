@@ -1,0 +1,51 @@
+/* inicio */
+.sectionInicio{
+  display: flex;
+  flex-direction: column;
+}
+
+.titulo{
+  color: var(--textoPrimario);
+  font-family: var(--fontRubik);
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.titulo+p,
+.banner-inicio>p{
+  color: var(--textoSecundario);
+}
+
+.banner-inicio{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 1rem;
+  padding: 1.5rem;
+  width: clamp(250px, 100%, 100%);
+  height: 20rem;
+  background: url(../recursos/img/one-punch-man.svg) no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  border-radius: .35rem;
+  position: relative;
+}
+.banner-inicio>:not(.sombra){
+  z-index: 2;
+}
+.banner-inicio>h2{
+  font-family: var(--fontRubik);
+}
+.banner-inicio>p{
+  padding-right: 40%;
+}
+.sombra{
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(270deg, rgba(6, 9, 15, 0.32) 0%, rgba(6, 9, 15, 0.9) 100%);
+}
+/* inicio */

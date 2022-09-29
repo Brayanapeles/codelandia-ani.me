@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./estilos/style.css">
   <link rel="stylesheet" href="./estilos/mobile.css">
+  <link rel="stylesheet" href="./estilos/paginas.css">
   <script src="./main.js"></script>
   <title>Ani.me</title>
 </head>
@@ -26,7 +27,22 @@
       <button id="menuMobile">menu</button>
     </menu>
   </header>
-  <main></main>
+  <main>
+    <script>
+      var main = document.querySelector('main');
+      async function request(){
+        try{
+          const response = await fetch('./paginas/inicio.html');
+          const section = await response.text();
+          main.textContent = "";
+          main.innerHTML = section;
+        }catch(err){
+          console.log(`Deu ruim: \n ${err}`)
+        }
+      }
+      request();
+    </script>
+  </main>
   <footer>
     <p>
       Todos os direitos reservados aos criadores e produtores dos animes
