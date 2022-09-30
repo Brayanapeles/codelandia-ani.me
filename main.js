@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
       this.parentElement.querySelector('.ativo').classList.remove('ativo');
       this.classList.add('ativo');
       getTela(this.dataset.pagina);
-      if (menu.classList.contains('ativo')) menu.classList.remove('ativo');
+      if (menu.classList.contains('ativo')) document.getElementById('menuMobile').click();
     });
   });
 
